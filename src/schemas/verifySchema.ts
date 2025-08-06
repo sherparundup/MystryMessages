@@ -1,0 +1,5 @@
+import {z} from "zod"
+ 
+
+
+export const verifySchema=z.string().length(6,"The code must be 6 character long")
