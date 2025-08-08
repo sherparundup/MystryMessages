@@ -8,7 +8,7 @@ export const VerificationEmialSender = async (
 ): Promise<apiResponse> => {
   try {
     await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
+      from: `${process.env.ADMIN_EMAIL}`,
       to: "hehehhahahaha@gmail.vom", // ✅ send to the actual user
       subject: "Verify your email",
       react: VerificationEmail({ username, otp: verifyCode }),
